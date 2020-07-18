@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Worker signe in</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script type="text/javascript" src='js.js'></script>
+	<link rel="stylesheet" type="text/css" href="p1.js">
+  <style type="text/css">
+		body{
+	background-image: url(maybach222.jpg);
+	background-size: cover;
+}
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 50px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #2e86de;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #1c0909;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #7f8c8d;
+  padding: 20px;
+  position: relative;
+
+  
+}
+.border{
+	height: auto;
+    width: 300px;
+    position: relative;
+    right: -800px;
+    bottom: -70px;
+    }
+    .fName{
+    	width: auto;
+        height: 30px;
+    }
+    h2{
+    	position: relative;
+    right: -820px;
+    top: 86px;
+
+    }
+</style>
+	
+</head>
+<body>
+	<h2> Put Your Informations :</h2>
+
+<div class="border">
+  <form action="/action_page.php">
+    <label class="fName" for="fname">First Name</label><br>
+    <input id="fName" type="text"  name="firstname"  placeholder="Your name..." required><br>
+    <label class='lName' for="lname">Last Name</label><br>
+    <input id='lName' type="text"  name="lastname" placeholder="Your last name..." required><br>
+    <label class='email' for="email">Your E-mail</label><br>
+    <input id='email' type="text"  name="email" placeholder="Your E-mail..." required><br>
+    <label class='pw' for="Password">Password</label><br>
+    <input id='pw' type="Password"  name="Password" placeholder="Password..." required><br>
+    <label class="Ycommand" for="Ycommand">Your Command</label><br>
+    <input id="Ycommand" type="text"  name="Ycommand"  placeholder="Your Command..." required><br>
+   
+    <input type="submit" onclick="func1()" value="SIGN UP">
+  </form>
+</div>
+ 
+<script >
+
+  var obj={}
+obj.firstName = document.getElementById('fName').value
+obj.lastname = document.getElementById('lName').value
+obj.email = document.getElementById('email').value
+obj.password = document.getElementById('pw').value
+obj.firstName = document.getElementById('Ycommand').value
+function func1(){
+localStorage.setItem("key",document.getElementById('fName').value)
+localStorage.setItem("key2",document.getElementById('lName').value)
+localStorage.setItem("key3",document.getElementById('email').value)
+localStorage.setItem("key4",document.getElementById('pw').value)
+localStorage.setItem("key5",document.getElementById('Ycommand').value)
+welcome_message = "Welcome back " + localStorage.getItem("key") + " " + localStorage.getItem("key2") + ' Enjoy!'
+alert(welcome_message)
+location.href = "file:///home/jibril/Desktop/project2/p1.html"
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body{
+  background-image: url("car.jpg");
+  background-position: center;
+  background-size: cover;
+  margin: 380px;
+}     
+ p{
+   font-size: 30px;
+   text-align: center
+   
+}
+#Title{
+  position: relative;
+  bottom:300px ;
+  color: lightgreen;
+  text-shadow: 8px 8px 8px blue;
+  size: 200px;
+}
+#Title2{
+  position: relative;
+  bottom:10px;
+  color: white;
+  text-shadow: 8px 8px 8px green;
+}
+.buttonContact{
+position: relative;
+top: -287px;
+left: 700px;
+
+}
+.buttonCars{
+  position: relative;
+bottom: 282px;
+right: 425px;
+}
